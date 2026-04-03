@@ -1,0 +1,126 @@
+/* BODY BACKGROUND */
+body {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* AUTH CONTAINER */
+.auth-container {
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* TITLE */
+.auth-container h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* INPUTS */
+.auth-container input,
+.auth-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+/* INPUT FOCUS */
+.auth-container input:focus,
+.auth-container select:focus {
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/* BUTTON */
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* LINKS */
+.auth-container a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.auth-container p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* ERROR TEXT */
+.error {
+  color: #ffdddd;
+  font-size: 0.8rem;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* VALID / INVALID STATES */
+input.valid {
+  border: 2px solid #00ff88;
+}
+
+input.invalid {
+  border: 2px solid #ff4d4d;
+}
+
+/* INPUT GROUP (PASSWORD EYE) */
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  padding-right: 40px;
+}
+
+/* EYE ICON */
+.eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QuickShop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>🛍 ShopEasy</h2>
+
+  <div style="position: relative; width: 50%;">
+    <input type="text" id="searchInput" placeholder="Search products..." style="width:100%;">
+    <div id="suggestions" class="suggestions"></div>
+  </div>
+
+  <div>
+    <a href="cart.html" style="color:white; text-decoration:none;">
+  🛒 Cart (<span id="cartCount">0</span>)
+    </a>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ================= FILTER SIDEBAR ================= -->
+  <aside>
+    <h3>Filters</h3>
+
+    <!-- Category -->
+    <div class="filter-section">
+      <h4>Category</h4>
+      <label><input type="checkbox" value="Electronics" class="categoryCheck"> Electronics</label><br>
+      <label><input type="checkbox" value="Fashion" class="categoryCheck"> Fashion</label>
+    </div>
+
+    <!-- Sub Category -->
+    <div class="filter-section">
+      <h4>Sub Category</h4>
+      <select id="subCategoryFilter">
+        <option value="">All</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Tablet">Tablet</option>
+        <option value="Monitor">Monitor</option>
+        <option value="Printer">Printer</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Speaker">Speaker</option>
+        <option value="Appliances">Appliances</option>
+        <option value="TV">TV</option>
+        <option value="Footwear">Footwear</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Bags">Bags</option>
+      </select>
+    </div>
+
+    <!-- Brand -->
+    <div class="filter-section">
+      <h4>Brand</h4>
+      <select id="brandFilter">
+        <option value="">All Brands</option>
+        <option value="Dell">Dell</option>
+        <option value="HP">HP</option>
+        <option value="Lenovo">Lenovo</option>
+        <option value="Asus">Asus</option>
+        <option value="Acer">Acer</option>
+        <option value="Apple">Apple</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Nike">Nike</option>
+        <option value="Adidas">Adidas</option>
+        <option value="Puma">Puma</option>
+        <option value="Sony">Sony</option>
+        <option value="Boat">Boat</option>
+        <option value="LG">LG</option>
+      </select>
+    </div>
+
+    <!-- Price Slider -->
+    <div class="filter-section">
+      <h4>Price Range</h4>
+      <input type="range" id="priceRange" min="0" max="80000" step="500" value="80000">
+      <p>Up to ₹<span id="priceValue">80000</span></p>
+    </div>
+
+    <!-- Rating -->
+    <div class="filter-section">
+      <h4>Rating</h4>
+      <select id="ratingFilter">
+        <option value="">All</option>
+        <option value="4">4★ & above</option>
+        <option value="5">5★ only</option>
+      </select>
+    </div>
+
+    <!-- Stock -->
+    <div class="filter-section">
+      <h4>Availability</h4>
+      <label>
+        <input type="checkbox" id="inStockFilter"> In Stock Only
+      </label>
+    </div>
+
+    <!-- Discount -->
+    <div class="filter-section">
+      <h4>Discount</h4>
+      <select id="discountFilter">
+        <option value="">All</option>
+        <option value="10">10% & above</option>
+        <option value="20">20% & above</option>
+        <option value="30">30% & above</option>
+      </select>
+    </div>
+
+    <!-- Sort -->
+    <div class="filter-section">
+      <h4>Sort By</h4>
+      <select id="sortFilter">
+        <option value="">Default</option>
+        <option value="lowHigh">Price: Low → High</option>
+        <option value="highLow">Price: High → Low</option>
+        <option value="rating">Rating</option>
+        <option value="discount">Highest Discount</option>
+      </select>
+    </div>
+
+    <button id="clearFilters">Clear Filters</button>
+
+  </aside>
+
+  <!-- ================= PRODUCT AREA ================= -->
+  <main>
+    <div id="loader" class="loader"></div>
+    <div id="productContainer"></div>
+    <div id="pagination"></div>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

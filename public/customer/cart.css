@@ -1,0 +1,168 @@
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cart-item img {
+  border-radius: 6px;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-summary {
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  text-align: right;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cart-summary button {
+  margin-top: 10px;
+  width: auto;
+  padding: 10px 20px;
+}
+
+
+.cart-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.cart-left {
+  flex: 3;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cart-right {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cart-right button {
+  margin-top: 15px;
+  background: #ffd814;
+  font-weight: bold;
+}
+
+.cart-product {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  align-items: flex-start;
+}
+
+.cart-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-details {
+  flex: 1;
+}
+
+.cart-details h4 {
+  margin: 0 0 8px 0;
+}
+
+.stock {
+  color: green;
+  font-size: 14px;
+}
+
+.cart-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.qty-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 4px 10px;
+  gap: 10px;
+}
+
+.qty-box button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #007185;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  text-decoration: underline;
+}
+
+.cart-price {
+  font-weight: bold;
+  font-size: 18px;
+}
+#checkoutBtn{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+header {
+  background: #131921;         
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin : 0;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+header a:hover {
+  background: #232f3e;         
+}
+
+
