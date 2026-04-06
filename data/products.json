@@ -1,0 +1,83 @@
+[
+  { "id": 1, 
+    "name": "Dell Inspiron 15", 
+    "category": "Electronics", 
+    "subCategory": "Laptop", 
+    "brand": "Dell", 
+    "price": 55000, 
+    "discount": 10, 
+    "stock": 12, 
+    "rating": 4, 
+    "image": "asset/img1.png" 
+  },
+
+    { 
+    "id": 2, 
+    "name": "HP Pavilion", 
+    "category": "Electronics", 
+    "subCategory": "Laptop", 
+    "brand": "HP", 
+    "price": 60000, "discount": 15, 
+    "stock": 8, 
+    "rating": 5, 
+    "image": "https://picsum.photos/200?random=2" },
+    
+    
+    { "id": 3, "name": "Lenovo IdeaPad", "category": "Electronics", "subCategory": "Laptop", "brand": "Lenovo", "price": 48000, "discount": 8, "stock": 10, "rating": 4, "image": "https://picsum.photos/200?random=3" },
+  { "id": 4, "name": "Asus VivoBook", "category": "Electronics", "subCategory": "Laptop", "brand": "Asus", "price": 52000, "discount": 12, "stock": 5, "rating": 4, "image": "https://picsum.photos/200?random=4" },
+  { "id": 5, "name": "Acer Nitro 5", "category": "Electronics", "subCategory": "Laptop", "brand": "Acer", "price": 75000, "discount": 18, "stock": 6, "rating": 5, "image": "https://picsum.photos/200?random=5" },
+
+  { "id": 6, "name": "iPhone 14", "category": "Electronics", "subCategory": "Mobile", "brand": "Apple", "price": 70000, "discount": 5, "stock": 15, "rating": 5, "image": "https://picsum.photos/200?random=6" },
+  { "id": 7, "name": "Samsung Galaxy S23", "category": "Electronics", "subCategory": "Mobile", "brand": "Samsung", "price": 45000, "discount": 10, "stock": 20, "rating": 4, "image": "https://picsum.photos/200?random=7" },
+  { "id": 8, "name": "OnePlus 11R", "category": "Electronics", "subCategory": "Mobile", "brand": "OnePlus", "price": 35000, "discount": 12, "stock": 18, "rating": 4, "image": "https://picsum.photos/200?random=8" },
+  { "id": 9, "name": "Realme Narzo", "category": "Electronics", "subCategory": "Mobile", "brand": "Realme", "price": 18000, "discount": 20, "stock": 25, "rating": 3, "image": "https://picsum.photos/200?random=9" },
+  { "id": 10, "name": "Vivo V27", "category": "Electronics", "subCategory": "Mobile", "brand": "Vivo", "price": 22000, "discount": 10, "stock": 17, "rating": 4, "image": "https://picsum.photos/200?random=10" },
+
+  { "id": 11, "name": "Sony WH-1000XM4", "category": "Electronics", "subCategory": "Headphones", "brand": "Sony", "price": 3000, "discount": 15, "stock": 30, "rating": 4, "image": "https://picsum.photos/200?random=11" },
+  { "id": 12, "name": "Boat Rockerz", "category": "Electronics", "subCategory": "Headphones", "brand": "Boat", "price": 1200, "discount": 25, "stock": 40, "rating": 4, "image": "https://picsum.photos/200?random=12" },
+  { "id": 13, "name": "JBL Flip 5", "category": "Electronics", "subCategory": "Speaker", "brand": "JBL", "price": 4000, "discount": 10, "stock": 22, "rating": 5, "image": "https://picsum.photos/200?random=13" },
+  { "id": 14, "name": "Noise Smart Watch", "category": "Electronics", "subCategory": "Smartwatch", "brand": "Noise", "price": 2500, "discount": 30, "stock": 35, "rating": 4, "image": "https://picsum.photos/200?random=14" },
+  { "id": 15, "name": "Logitech Mouse", "category": "Electronics", "subCategory": "Accessories", "brand": "Logitech", "price": 800, "discount": 5, "stock": 50, "rating": 3, "image": "https://picsum.photos/200?random=15" },
+
+  { "id": 16, "name": "Nike Sports Shoes", "category": "Fashion", "subCategory": "Footwear", "brand": "Nike", "price": 2200, "discount": 20, "stock": 25, "rating": 5, "image": "https://picsum.photos/200?random=16" },
+  { "id": 17, "name": "Adidas Running Shoes", "category": "Fashion", "subCategory": "Footwear", "brand": "Adidas", "price": 2500, "discount": 15, "stock": 20, "rating": 4, "image": "https://picsum.photos/200?random=17" },
+  { "id": 18, "name": "Puma Sandals", "category": "Fashion", "subCategory": "Footwear", "brand": "Puma", "price": 900, "discount": 10, "stock": 30, "rating": 3, "image": "https://picsum.photos/200?random=18" },
+  { "id": 19, "name": "Woodland Boots", "category": "Fashion", "subCategory": "Footwear", "brand": "Woodland", "price": 3000, "discount": 12, "stock": 12, "rating": 4, "image": "https://picsum.photos/200?random=19" },
+  { "id": 20, "name": "Bata Slippers", "category": "Fashion", "subCategory": "Footwear", "brand": "Bata", "price": 500, "discount": 5, "stock": 40, "rating": 3, "image": "https://picsum.photos/200?random=20" },
+
+  { "id": 21, "name": "Levis Jeans", "category": "Fashion", "subCategory": "Clothing", "brand": "Levis", "price": 1500, "discount": 18, "stock": 20, "rating": 4, "image": "https://picsum.photos/200?random=21" },
+  { "id": 22, "name": "Zara Jacket", "category": "Fashion", "subCategory": "Clothing", "brand": "Zara", "price": 2500, "discount": 20, "stock": 10, "rating": 5, "image": "https://picsum.photos/200?random=22" },
+  { "id": 23, "name": "H&M T-Shirt", "category": "Fashion", "subCategory": "Clothing", "brand": "H&M", "price": 800, "discount": 25, "stock": 35, "rating": 4, "image": "https://picsum.photos/200?random=23" },
+  { "id": 24, "name": "Allen Solly Shirt", "category": "Fashion", "subCategory": "Clothing", "brand": "Allen Solly", "price": 1100, "discount": 10, "stock": 18, "rating": 4, "image": "https://picsum.photos/200?random=24" },
+  { "id": 25, "name": "Biba Kurti", "category": "Fashion", "subCategory": "Clothing", "brand": "Biba", "price": 1200, "discount": 15, "stock": 22, "rating": 4, "image": "https://picsum.photos/200?random=25" },
+
+  { "id": 26, "name": "Samsung LED TV", "category": "Electronics", "subCategory": "TV", "brand": "Samsung", "price": 30000, "discount": 12, "stock": 8, "rating": 5, "image": "https://picsum.photos/200?random=26" },
+  { "id": 27, "name": "LG Refrigerator", "category": "Electronics", "subCategory": "Appliances", "brand": "LG", "price": 25000, "discount": 10, "stock": 6, "rating": 5, "image": "https://picsum.photos/200?random=27" },
+  { "id": 28, "name": "IFB Washing Machine", "category": "Electronics", "subCategory": "Appliances", "brand": "IFB", "price": 20000, "discount": 15, "stock": 7, "rating": 4, "image": "https://picsum.photos/200?random=28" },
+  { "id": 29, "name": "Voltas AC", "category": "Electronics", "subCategory": "Appliances", "brand": "Voltas", "price": 35000, "discount": 18, "stock": 5, "rating": 4, "image": "https://picsum.photos/200?random=29" },
+  { "id": 30, "name": "Panasonic Microwave", "category": "Electronics", "subCategory": "Appliances", "brand": "Panasonic", "price": 8000, "discount": 20, "stock": 10, "rating": 4, "image": "https://picsum.photos/200?random=30" },
+
+  { "id": 31, "name": "Mi Power Bank", "category": "Electronics", "subCategory": "Accessories", "brand": "Mi", "price": 1500, "discount": 10, "stock": 30, "rating": 4, "image": "https://picsum.photos/200?random=31" },
+  { "id": 32, "name": "TP-Link Router", "category": "Electronics", "subCategory": "Accessories", "brand": "TP-Link", "price": 2500, "discount": 8, "stock": 15, "rating": 4, "image": "https://picsum.photos/200?random=32" },
+  { "id": 33, "name": "HP Printer", "category": "Electronics", "subCategory": "Printer", "brand": "HP", "price": 9000, "discount": 12, "stock": 9, "rating": 4, "image": "https://picsum.photos/200?random=33" },
+  { "id": 34, "name": "Dell Monitor", "category": "Electronics", "subCategory": "Monitor", "brand": "Dell", "price": 12000, "discount": 10, "stock": 11, "rating": 4, "image": "https://picsum.photos/200?random=34" },
+  { "id": 35, "name": "Apple iPad", "category": "Electronics", "subCategory": "Tablet", "brand": "Apple", "price": 28000, "discount": 5, "stock": 14, "rating": 5, "image": "https://picsum.photos/200?random=35" },
+
+  { "id": 36, "name": "Fastrack Watch", "category": "Fashion", "subCategory": "Accessories", "brand": "Fastrack", "price": 3500, "discount": 15, "stock": 16, "rating": 4, "image": "https://picsum.photos/200?random=36" },
+  { "id": 37, "name": "Skybags Backpack", "category": "Fashion", "subCategory": "Bags", "brand": "Skybags", "price": 1500, "discount": 10, "stock": 20, "rating": 4, "image": "https://picsum.photos/200?random=37" },
+  { "id": 38, "name": "Wildcraft Laptop Bag", "category": "Fashion", "subCategory": "Bags", "brand": "Wildcraft", "price": 1200, "discount": 12, "stock": 18, "rating": 4, "image": "https://picsum.photos/200?random=38" },
+  { "id": 39, "name": "RayBan Sunglasses", "category": "Fashion", "subCategory": "Accessories", "brand": "RayBan", "price": 2000, "discount": 20, "stock": 10, "rating": 5, "image": "https://picsum.photos/200?random=39" },
+  { "id": 40, "name": "Tommy Hilfiger Wallet", "category": "Fashion", "subCategory": "Accessories", "brand": "Tommy Hilfiger", "price": 900, "discount": 8, "stock": 25, "rating": 4, "image": "https://picsum.photos/200?random=40" },
+
+  { "id": 41, "name": "Canon Printer", "category": "Electronics", "subCategory": "Printer", "brand": "Canon", "price": 10000, "discount": 15, "stock": 7, "rating": 4, "image": "https://picsum.photos/200?random=41" },
+  { "id": 42, "name": "LG Monitor", "category": "Electronics", "subCategory": "Monitor", "brand": "LG", "price": 13000, "discount": 10, "stock": 9, "rating": 4, "image": "https://picsum.photos/200?random=42" },
+  { "id": 43, "name": "Samsung Tablet", "category": "Electronics", "subCategory": "Tablet", "brand": "Samsung", "price": 26000, "discount": 12, "stock": 13, "rating": 4, "image": "https://picsum.photos/200?random=43" },
+  { "id": 44, "name": "Nike Track Pants", "category": "Fashion", "subCategory": "Clothing", "brand": "Nike", "price": 1400, "discount": 18, "stock": 21, "rating": 4, "image": "https://picsum.photos/200?random=44" },
+  { "id": 45, "name": "Adidas Hoodie", "category": "Fashion", "subCategory": "Clothing", "brand": "Adidas", "price": 1800, "discount": 20, "stock": 19, "rating": 5, "image": "https://picsum.photos/200?random=45" },
+
+  { "id": 46, "name": "Puma Cap", "category": "Fashion", "subCategory": "Accessories", "brand": "Puma", "price": 400, "discount": 10, "stock": 30, "rating": 3, "image": "https://picsum.photos/200?random=46" },
+  { "id": 47, "name": "Boat Bluetooth Speaker", "category": "Electronics", "subCategory": "Speaker", "brand": "Boat", "price": 3500, "discount": 22, "stock": 18, "rating": 4, "image": "https://picsum.photos/200?random=47" },
+  { "id": 48, "name": "Sony Home Theatre", "category": "Electronics", "subCategory": "Speaker", "brand": "Sony", "price": 15000, "discount": 15, "stock": 6, "rating": 5, "image": "https://picsum.photos/200?random=48" },
+  { "id": 49, "name": "Havells Induction", "category": "Electronics", "subCategory": "Appliances", "brand": "Havells", "price": 3000, "discount": 12, "stock": 14, "rating": 4, "image": "https://picsum.photos/200?random=49" },
+  { "id": 50, "name": "Bajaj Mixer Grinder", "category": "Electronics", "subCategory": "Appliances", "brand": "Bajaj", "price": 4500, "discount": 18, "stock": 12, "rating": 4, "image": "https://picsum.photos/200?random=50" }
+]

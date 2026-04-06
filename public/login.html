@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<div class="auth-container">
+  <h2>Login</h2>
+
+  <input type="email" id="loginEmail" placeholder="Email">
+  <p class="error" id="loginEmailError"></p>
+
+  <div class="input-group">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <span class="eye" onclick="togglePassword('loginPassword', this)">👁</span>
+  </div>
+  <p class="error" id="loginPasswordError"></p>
+
+  <button onclick="login()">Login</button>
+
+  <p><a href="forgot.html">Forgot Password?</a></p>
+  <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
