@@ -1,0 +1,118 @@
+.product-page {
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+.product-view {
+  display: flex;
+  gap: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-view img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h2 {
+  margin-bottom: 10px;
+}
+
+.brand, .category {
+  color: #555;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.discount {
+  color: green;
+  margin-left: 10px;
+}
+
+.rating {
+  margin: 10px 0;
+}
+
+.stock.in {
+  color: green;
+  font-weight: bold;
+}
+
+.stock.out {
+  color: red;
+  font-weight: bold;
+}
+
+.product-view button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  width: 200px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-view button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+.buy-now {
+  margin-top: 10px;
+  padding: 10px 20px;
+  width: 200px;
+  background: orange;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.buy-now:hover {
+  background: darkorange;
+}
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

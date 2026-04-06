@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="orders.css">
+
+<div id="navbar"></div>
+
+<h2 class="page-title">My Orders</h2>
+<div id="ordersContainer"></div>
+
+<script>
+/* LOAD NAVBAR */
+fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
+const orders = JSON.parse(localStorage.getItem("orders")) || [];
+const container = document.getElementById("ordersContainer");
+
+/* EMPTY STATE */
+if (orders.length === 0) {
+  container.innerHTML = "<p class='empty'>No orders yet 😢</p>";
+}
+
+/* RENDER ORDERS */
+orders.reverse().forEach(order => {
+  let itemsHTML = "";
+
+  if (order.items) {
+    order.items.forEach(item => {
+      itemsHTML += `
+        <div class="order-item">
+          <span>${item.name}</span>
+          <span>Qty: ${item.quantity}</span>
+        </div>
+      `;
+    });
+  }
+
+  container.innerHTML += `
+    <div class="order-card">
+      <div class="order-header">
+        <h4>Order #${order.id}</h4>
+        <span class="status ${order.status.toLowerCase()}">${order.status}</span>
+      </div>
+
+      <p class="total">Total: ₹${order.total}</p>
+
+      <div class="items">
+        ${itemsHTML}
+      </div>
+
+      ${
+        order.status !== "Cancelled"
+          ? `<button onclick="cancelOrder(${order.id})" class="cancel-btn">Cancel Order</button>`
+          : ""
+      }
+    </div>
+  `;
+});
+
+/* CANCEL ORDER */
+function cancelOrder(id) {
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+  const confirmCancel = confirm("Cancel this order?");
+  if (!confirmCancel) return;
+
+  orders = orders.map(order => {
+    if (order.id === id) {
+      return { ...order, status: "Cancelled" };
+    }
+    return order;
+  });
+
+  localStorage.setItem("orders", JSON.stringify(orders));
+  location.reload();
+}
+</script>

@@ -36,6 +36,24 @@ header input {
   border: none;
   outline: none;
 }
+/*nav links */
+ header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
 
 /* ================= LAYOUT ================= */
 

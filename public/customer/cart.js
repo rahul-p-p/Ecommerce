@@ -87,5 +87,10 @@ window.removeFromCart = function(id) {
 };
 
 document.getElementById("checkoutBtn").addEventListener("click", () => {
-  alert("Checkout system coming soon 🚀");
+  if (cart.length === 0) {
+    alert("Cart is empty!");
+    return;
+  }
+
+  window.location.href = "checkout.html"; 
 });

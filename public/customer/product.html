@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="product.css">
+
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar"></div>
+
+<div class="product-page">
+  <div id="productDetails"></div>
+</div>
+
+<script>
+/* LOAD NAVBAR */
+fetch("navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+
+<script src="product.js"></script>
+
+</body>
