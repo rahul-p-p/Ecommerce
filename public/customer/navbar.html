@@ -1,0 +1,62 @@
+<style>
+    .navbar {
+  background: #131921;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.navbar input {
+  flex: 1;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.nav-links a {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+</style>
+<header class="navbar">
+  <h2>🛍 ShopEasy</h2>
+
+  <input type="text" placeholder="Search products..." />
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="orders.html">My Orders</a>
+    <a href="cart.html">🛒 Cart</a>
+  </div>
+</header>
+<script id="x2k9dl">
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let totalItems = 0;
+
+  cart.forEach(item => {
+    totalItems += item.quantity;
+  });
+
+  const cartCountElement = document.getElementById("cartCount");
+  if (cartCountElement) {
+    cartCountElement.textContent = totalItems;
+  }
+}
+
+// Run on page load
+updateCartCount();
+
+// Optional: update when storage changes (multi-tab support)
+window.addEventListener("storage", updateCartCount);
+</script>

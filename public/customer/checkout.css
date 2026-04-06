@@ -1,0 +1,143 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+/* NAVBAR */
+.navbar {
+  background: black;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* CHECKOUT ITEMS (TOP LIST) */
+#checkoutItems {
+  max-width: 800px;
+  margin: 30px auto 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* EACH ITEM */
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+
+.checkout-item:last-child {
+  border-bottom: none;
+}
+
+.checkout-item p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* PRODUCT NAME */
+.checkout-item p:first-child {
+  font-weight: bold;
+  width: 40%;
+}
+
+/* CHECKOUT BOX */
+.checkout-box {
+  max-width: 400px;
+  margin: 30px auto 60px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* TOTAL */
+.checkout-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* INPUTS */
+.checkout-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* INPUT FOCUS */
+.checkout-box input:focus {
+  outline: none;
+  border-color: black;
+}
+
+/* BUTTON */
+.checkout-box button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.checkout-box button:hover {
+  background: #333;
+}
+.cancel-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cancel-btn:hover {
+  background: darkred;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #checkoutItems {
+    margin: 20px;
+  }
+
+  .checkout-box {
+    margin: 20px;
+  }
+
+  .checkout-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
