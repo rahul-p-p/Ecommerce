@@ -253,6 +253,14 @@ async function login() {
       return;
     }
 
+    // ✅ STORE USER (VERY IMPORTANT)
+    localStorage.setItem("currentUser", JSON.stringify({
+      id: data.user.id,
+      username: data.user.username,
+      email: data.user.email,
+      role: data.role
+    }));
+
     // ROLE ROUTING
     if (data.role === "seller") {
       window.location.href = "/seller/dashboard.html";
@@ -273,4 +281,9 @@ function togglePassword(id, el) {
 
   input.type = input.type === "password" ? "text" : "password";
   el.textContent = input.type === "password" ? "👁" : "🙈";
+}
+
+function logout() {
+  localStorage.removeItem("currentUser");
+  window.location.href = "/login.html";
 }

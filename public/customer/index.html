@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>QuickShop</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -10,22 +10,25 @@
   <h2>🛍 ShopEasy</h2>
 
   <!-- NAV LINKS -->
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="orders.html">My Orders</a>
-  </div>
-
+  
+  
   <!-- SEARCH -->
-  <div style="position: relative; width: 50%;">
+  <div style="position: relative;left:10rem; width: 50%;">
     <input type="text" id="searchInput" placeholder="Search products..." style="width:100%;">
     <div id="suggestions" class="suggestions"></div>
   </div>
 
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="orders.html">My Orders</a>
+    <a href="profile.html">My Profile</a>
+  </div>
   <!-- CART -->
-  <div>
-    <a href="cart.html" style="color:white; text-decoration:none;">
+  <div class="right-section">
+    <a href="cart.html" class="cart-link">
       🛒 Cart (<span id="cartCount">0</span>)
     </a>
+    <button class="logout-btn" onclick="logout()">Logout</button>
   </div>
 </header>
 
@@ -136,7 +139,7 @@
 
 </div>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

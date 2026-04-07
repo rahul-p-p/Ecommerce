@@ -1,0 +1,130 @@
+/* ================= CONTAINER ================= */
+.profile-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 0 15px;
+}
+
+/* ================= TITLE ================= */
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #131921;
+}
+
+/* ================= CARD ================= */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.profile-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= LABEL ================= */
+.profile-card label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ================= INPUTS ================= */
+.profile-card input,
+.profile-card textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+/* FOCUS EFFECT */
+.profile-card input:focus,
+.profile-card textarea:focus {
+  border-color: #ff9900;
+  outline: none;
+  box-shadow: 0 0 4px rgba(255,153,0,0.4);
+}
+
+/* DISABLED EMAIL */
+.profile-card input:disabled {
+  background: #f5f5f5;
+  color: #777;
+}
+
+/* ================= TEXTAREA ================= */
+.profile-card textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* ================= BUTTON ================= */
+.profile-card button {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #ff9900, #ff7a00);
+  border: none;
+  padding: 12px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.profile-card button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, #ff7a00, #e65c00);
+}
+
+/* ================= LOGOUT BUTTON ================= */
+.logout-btn {
+  margin-top: 15px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 11px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #e60000;
+  transform: scale(1.03);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  .profile-container {
+    margin: 30px auto;
+  }
+
+  .profile-card {
+    padding: 20px;
+  }
+
+  .profile-card input,
+  .profile-card textarea {
+    font-size: 15px;
+  }
+
+  .profile-card button,
+  .logout-btn {
+    font-size: 16px;
+    padding: 14px;
+  }
+}

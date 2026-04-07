@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Profile</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div class="profile-container">
+  <h2>My Profile</h2>
+
+  <div class="profile-card">
+    <label>Name</label>
+    <input type="text" id="username">
+
+    <label>Email</label>
+    <input type="text" id="email" disabled>
+
+    <label>Phone</label>
+    <input type="text" id="phone" placeholder="Enter phone number">
+
+    <label>Address</label>
+    <textarea id="address" placeholder="Enter address"></textarea>
+
+    <button onclick="updateProfile()">Update Profile</button>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+</div>
+
+<script src="js/profile.js"></script>
+</body>
+</html>
