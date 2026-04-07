@@ -412,3 +412,128 @@ button:hover {
     padding: 10px 14px;
   }
 }
+
+/* ================= HEADER ENHANCED ================= */
+/* ================= HEADER CLEAN ================= */
+
+header {
+  background: #131921;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 15px;
+}
+
+/* LOGO */
+header h2 {
+  margin: 0;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+/* SEARCH WRAPPER */
+header > div:nth-child(2) {
+  width: 100%;
+}
+
+header input {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT SECTION (cart + logout) */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+/* CLEAN CART */
+.cart-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #232f3e;
+
+  display: inline-flex; /* important */
+  align-items: center;
+  gap: 6px;
+
+  white-space: nowrap; /* prevents breaking */
+  transition: 0.2s;
+}
+
+.cart-link:hover {
+  background: #37475a;
+}
+
+/* CART COUNT BADGE */
+#cartCount {
+  background: #febd69;
+  color: black;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  background: transparent;
+  border: 1px solid #888;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  border-color: white;
+}
+
+/* CENTER SEARCH */
+header > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+header > div:nth-child(2) input {
+  width: 70%;
+  max-width: 500px;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.suggestionsnon {
+  display: none;
+}

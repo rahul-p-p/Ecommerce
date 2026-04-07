@@ -1,13 +1,26 @@
-
-
 const cartContainer = document.getElementById("cartContainer");
 const cartTotal = document.getElementById("cartTotal");
 const totalItems = document.getElementById("totalItems");
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = [];
 
-renderCart();
+// ================= LOAD CART FROM BACKEND =================
+function loadCart() {
+  fetch("http://localhost:3000/api/cart")
+    .then(res => res.json())
+    .then(data => {
+      cart = data;
+      renderCart();
+    })
+    .catch(err => {
+      console.error("Cart load error:", err);
+    });
+}
 
+loadCart();
+
+
+// ================= RENDER =================
 function renderCart() {
   cartContainer.innerHTML = "";
 
@@ -66,31 +79,45 @@ function renderCart() {
   totalItems.textContent = itemCount;
 }
 
+
+// ================= CHANGE QTY =================
 window.changeQty = function(id, change) {
-  const item = cart.find(p => p.id === id);
-  if (!item) return;
-
-  item.quantity += change;
-
-  if (item.quantity <= 0) {
-    cart = cart.filter(p => p.id !== id);
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-  renderCart();
+  fetch(`http://localhost:3000/api/cart/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ change })
+  })
+    .then(res => res.json())
+    .then(data => {
+      cart = data;
+      renderCart();
+    })
+    .catch(err => console.error(err));
 };
 
+
+// ================= REMOVE =================
 window.removeFromCart = function(id) {
-  cart = cart.filter(p => p.id !== id);
-  localStorage.setItem("cart", JSON.stringify(cart));
-  renderCart();
+  fetch(`http://localhost:3000/api/cart/${id}`, {
+    method: "DELETE"
+  })
+    .then(res => res.json())
+    .then(data => {
+      cart = data;
+      renderCart();
+    })
+    .catch(err => console.error(err));
 };
 
+
+// ================= CHECKOUT =================
 document.getElementById("checkoutBtn").addEventListener("click", () => {
   if (cart.length === 0) {
     alert("Cart is empty!");
     return;
   }
 
-  window.location.href = "checkout.html"; 
+  window.location.href = "checkout.html";
 });

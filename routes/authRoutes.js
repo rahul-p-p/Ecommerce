@@ -6,7 +6,7 @@ const router = express.Router();
 
 const USERS_FILE = path.join(__dirname, "../data/users.json");
 
-// helper
+// ================= HELPERS =================
 function getUsers() {
   try {
     return JSON.parse(fs.readFileSync(USERS_FILE));
@@ -20,7 +20,6 @@ function saveUsers(users) {
 }
 
 // ================= SIGNUP =================
-// ================= SIGNUP =================
 router.post("/signup", (req, res) => {
   const { username, email, password, role } = req.body;
 
@@ -31,21 +30,22 @@ router.post("/signup", (req, res) => {
     return res.json({ success: false, message: "User already exists" });
   }
 
-  // 🔥 AUTO ID GENERATION
-  const id = Date.now().toString(); // unique timestamp ID
+  const id = Date.now(); // number ID (important)
 
   const newUser = {
     id,
     username,
     email,
     password,
-    role
+    role,
+    address: "",
+    phone: ""
   };
 
   users.push(newUser);
   saveUsers(users);
 
-  res.json({ success: true, message: "Signup successful", userId: id });
+  res.json({ success: true, message: "Signup successful", user: newUser });
 });
 
 // ================= LOGIN =================
@@ -54,7 +54,11 @@ router.post("/login", (req, res) => {
 
   // ADMIN
   if (email === "admin@shop.com" && password === "admin123") {
-    return res.json({ success: true, role: "admin" });
+    return res.json({
+      success: true,
+      role: "admin",
+      user: { id: 0, email }
+    });
   }
 
   const users = getUsers();
@@ -68,7 +72,59 @@ router.post("/login", (req, res) => {
     return res.json({ success: false, message: "Wrong password" });
   }
 
-  res.json({ success: true, role: user.role });
+  // ✅ RETURN USER (IMPORTANT)
+  res.json({
+    success: true,
+    role: user.role,
+    user: user
+  });
+});
+
+
+
+// ================= UPDATE PROFILE =================
+router.put("/profile/:id", (req, res) => {
+  let users = getUsers();
+
+  const id = req.params.id; // ✅ KEEP AS STRING
+
+  const { username, address, phone } = req.body;
+
+  const userIndex = users.findIndex(
+    u => String(u.id) === String(id) // ✅ FIXED
+  );
+
+  if (userIndex === -1) {
+    return res.status(404).json({ success: false, message: "User not found" });
+  }
+
+  users[userIndex] = {
+    ...users[userIndex],
+    username: username || users[userIndex].username,
+    address: address || users[userIndex].address,
+    phone: phone || users[userIndex].phone
+  };
+
+  saveUsers(users);
+
+  res.json({
+    success: true,
+    user: users[userIndex]
+  });
+});
+// GET USER BY ID
+router.get("/user/:id", (req, res) => {
+  const users = getUsers();
+
+
+  const user = users.find(u => String(u.id) === String(req.params.id));
+
+
+  if (!user) {
+    return res.status(404).json({ message: "User not found" });
+  }
+
+  res.json(user);
 });
 
 module.exports = router;

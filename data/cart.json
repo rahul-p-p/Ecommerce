@@ -1,0 +1,33 @@
+[
+  {
+    "id": 7,
+    "name": "Samsung Galaxy S23",
+    "category": "Electronics",
+    "subCategory": "Mobile",
+    "brand": "Samsung",
+    "price": 45000,
+    "discount": 10,
+    "stock": 20,
+    "rating": 4,
+    "image": "asset/s23.jpg",
+    "description": "Flagship Samsung phone offering high-speed performance, excellent display, and versatile camera features.",
+    "reviews": [],
+    "quantity": 1
+  },
+  {
+    "id": 3,
+    "name": "Lenovo IdeaPad",
+    "category": "Electronics",
+    "subCategory": "Laptop",
+    "brand": "Lenovo",
+    "price": 48000,
+    "discount": 8,
+    "stock": 10,
+    "rating": 4,
+    "image": "asset/img1.png",
+    "description": "Affordable Lenovo laptop ideal for students and daily computing tasks.",
+    "reviews": [],
+    "sellerId": "seller123",
+    "quantity": 1
+  }
+]

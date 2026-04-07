@@ -1,0 +1,89 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: #131921;
+  color: white;
+  padding: 10px 20px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+}
+
+/* LOGO */
+.navbar h2 {
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+/* ================= SEARCH ================= */
+.navbar input {
+  width: 100%;
+  max-width: 450px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  justify-self: center; /* center the search bar */
+  font-size: 14px;
+}
+
+/* ================= NAV LINKS ================= */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  white-space: nowrap;
+}
+
+/* LINKS */
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+/* HOVER EFFECT */
+.nav-links a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ================= CART SPECIAL STYLE ================= */
+.nav-links a:nth-child(3) {
+  background: #232f3e;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.nav-links a:nth-child(3):hover {
+  background: #37475a;
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar input {
+    width: 100%;
+  }
+}
+

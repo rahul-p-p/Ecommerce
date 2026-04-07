@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="style.css">
+
+<h2 class="top-bar">
+  Seller Dashboard
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</h2>
+
+<h3 style="margin:5px 20px ;color: rgb(252, 219, 170);">Add Product</h3>
+<div class="form-grid">
+  <input id="pname" placeholder="Product Name">
+  <input id="pprice" placeholder="Price">
+
+  <input id="pcategory" placeholder="Category">
+  <input id="psubCategory" placeholder="Sub Category">
+
+  <input id="pbrand" placeholder="Brand">
+  <input id="pstock" placeholder="Stock">
+
+  <textarea id="pdesc" class="full" placeholder="Description"></textarea>
+
+  <button class="full" onclick="addProduct()" style="background-color: rgb(171, 114, 0); width: 80%;margin: 10px auto;">Add Product</button>
+</div>
+<hr>
+<h3 style="margin:5px 20px ;color: rgb(252, 219, 170);">MY PRODUCTS</h3>
+<div id="products"></div>
+<h3 style="margin:5px 20px ;color: rgb(252, 219, 170);">MY ORDERS</h3>
+<div id="orders"></div>
+
+<!-- ========== MODAL ========== -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <h3>Edit Product</h3>
+
+    <label for="editName">Product Name:</label>
+    <input id="editName"/>
+    <label for="editPrice">Price:</label>
+    <input id="editPrice" />
+    <label for="editStock">Stock:</label>
+    <input id="editStock" />
+    <label for="editDiscount">Discount:</label>
+    <input id="editDiscount" />
+    <label for="editDesc">Description:</label>
+    <textarea id="editDesc"></textarea>
+
+    <button onclick="saveEdit()">Save</button>
+    <button onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<script src="js/seller-dashboard.js"></script>

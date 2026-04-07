@@ -1,6 +1,119 @@
-<div class="success-box">
-  <h1>🎉 Order Placed Successfully!</h1>
+<link rel="stylesheet" href="css/common.css">
 
-  <a href="index.html">Continue Shopping</a>
-  <a href="orders.html">View Orders</a>
-</div>
+<style>
+/* ================= SUCCESS PAGE ================= */
+
+body {
+  background: #eaeded;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* CENTER CONTAINER */
+.success-box {
+  max-width: 420px;
+  margin: 80px auto;
+  background: white;
+  padding: 30px 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+}
+
+/* TITLE */
+.success-box h1 {
+  font-size: 24px;
+  color: #16a34a;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.success-box p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* BUTTON WRAPPER */
+.success-box a {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+/* BUTTONS */
+.success-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+/* PRIMARY BUTTON */
+.success-box a:first-child button {
+  background: #4f46e5;
+  color: white;
+}
+
+.success-box a:first-child button:hover {
+  background: #4338ca;
+}
+
+/* SECONDARY BUTTON */
+.success-box a:last-child button {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.success-box a:last-child button:hover {
+  background: #e5e7eb;
+}
+
+/* ICON ANIMATION */
+.success-box h1::before {
+  content: "🎉 ";
+}
+
+/* FADE IN */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 500px) {
+  .success-box {
+    margin: 40px 15px;
+    padding: 25px 18px;
+  }
+
+  .success-box h1 {
+    font-size: 20px;
+  }
+}
+</style>
+
+<body>
+  <div class="success-box">
+    <h1>✅ Order Successful!</h1>
+    <p>Your order has been placed successfully.</p>
+
+    <a href="orders.html">
+      <button>View Orders</button>
+    </a>
+
+    <a href="index.html">
+      <button>Continue Shopping</button>
+    </a>
+  </div>
+</body>
